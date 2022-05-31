@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB4DF0502844BFAE00A8602D /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DF04F2844BFAE00A8602D /* CSVParser.swift */; };
 		CB6BB34828438E8200DD666F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BB34728438E8200DD666F /* main.swift */; };
+		CBC1CC8D28439118005075F2 /* SwiftOrg in Frameworks */ = {isa = PBXBuildFile; productRef = CBC1CC8C28439118005075F2 /* SwiftOrg */; };
+		CBC1CC90284393D6005075F2 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = CBC1CC8F284393D6005075F2 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CB6BB34428438E8200DD666F /* orgengine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = orgengine; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB4DF04F2844BFAE00A8602D /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		CB6BB34428438E8200DD666F /* OrgPool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OrgPool; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6BB34728438E8200DD666F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC1CC90284393D6005075F2 /* ArgumentParser in Frameworks */,
+				CBC1CC8D28439118005075F2 /* SwiftOrg in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,33 +47,42 @@
 		CB6BB33B28438E8200DD666F = {
 			isa = PBXGroup;
 			children = (
-				CB6BB34628438E8200DD666F /* orgengine */,
+				CB6BB34628438E8200DD666F /* OrgPool */,
 				CB6BB34528438E8200DD666F /* Products */,
+				CBC1CC8B28439118005075F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		CB6BB34528438E8200DD666F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB6BB34428438E8200DD666F /* orgengine */,
+				CB6BB34428438E8200DD666F /* OrgPool */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CB6BB34628438E8200DD666F /* orgengine */ = {
+		CB6BB34628438E8200DD666F /* OrgPool */ = {
 			isa = PBXGroup;
 			children = (
 				CB6BB34728438E8200DD666F /* main.swift */,
+				CB4DF04F2844BFAE00A8602D /* CSVParser.swift */,
 			);
-			path = orgengine;
+			path = OrgPool;
+			sourceTree = "<group>";
+		};
+		CBC1CC8B28439118005075F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CB6BB34328438E8200DD666F /* orgengine */ = {
+		CB6BB34328438E8200DD666F /* OrgPool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB6BB34B28438E8200DD666F /* Build configuration list for PBXNativeTarget "orgengine" */;
+			buildConfigurationList = CB6BB34B28438E8200DD666F /* Build configuration list for PBXNativeTarget "OrgPool" */;
 			buildPhases = (
 				CB6BB34028438E8200DD666F /* Sources */,
 				CB6BB34128438E8200DD666F /* Frameworks */,
@@ -77,9 +92,13 @@
 			);
 			dependencies = (
 			);
-			name = orgengine;
+			name = OrgPool;
+			packageProductDependencies = (
+				CBC1CC8C28439118005075F2 /* SwiftOrg */,
+				CBC1CC8F284393D6005075F2 /* ArgumentParser */,
+			);
 			productName = orgengine;
-			productReference = CB6BB34428438E8200DD666F /* orgengine */;
+			productReference = CB6BB34428438E8200DD666F /* OrgPool */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CB6BB33F28438E8200DD666F /* Build configuration list for PBXProject "orgengine" */;
+			buildConfigurationList = CB6BB33F28438E8200DD666F /* Build configuration list for PBXProject "OrgPool" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -106,11 +125,15 @@
 				Base,
 			);
 			mainGroup = CB6BB33B28438E8200DD666F;
+			packageReferences = (
+				CB6BB3502843908500DD666F /* XCRemoteSwiftPackageReference "swift-org" */,
+				CBC1CC8E284393D6005075F2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = CB6BB34528438E8200DD666F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CB6BB34328438E8200DD666F /* orgengine */,
+				CB6BB34328438E8200DD666F /* OrgPool */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6BB34828438E8200DD666F /* main.swift in Sources */,
+				CB4DF0502844BFAE00A8602D /* CSVParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +285,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CB6BB33F28438E8200DD666F /* Build configuration list for PBXProject "orgengine" */ = {
+		CB6BB33F28438E8200DD666F /* Build configuration list for PBXProject "OrgPool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB6BB34928438E8200DD666F /* Debug */,
@@ -270,7 +294,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB6BB34B28438E8200DD666F /* Build configuration list for PBXNativeTarget "orgengine" */ = {
+		CB6BB34B28438E8200DD666F /* Build configuration list for PBXNativeTarget "OrgPool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CB6BB34C28438E8200DD666F /* Debug */,
@@ -280,6 +304,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB6BB3502843908500DD666F /* XCRemoteSwiftPackageReference "swift-org" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/madyankin/swift-org";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CBC1CC8E284393D6005075F2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CBC1CC8C28439118005075F2 /* SwiftOrg */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB6BB3502843908500DD666F /* XCRemoteSwiftPackageReference "swift-org" */;
+			productName = SwiftOrg;
+		};
+		CBC1CC8F284393D6005075F2 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBC1CC8E284393D6005075F2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB6BB33C28438E8200DD666F /* Project object */;
 }
