@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB4DF0502844BFAE00A8602D /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DF04F2844BFAE00A8602D /* CSVParser.swift */; };
 		CB6BB34828438E8200DD666F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BB34728438E8200DD666F /* main.swift */; };
 		CBC1CC8D28439118005075F2 /* SwiftOrg in Frameworks */ = {isa = PBXBuildFile; productRef = CBC1CC8C28439118005075F2 /* SwiftOrg */; };
 		CBC1CC90284393D6005075F2 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = CBC1CC8F284393D6005075F2 /* ArgumentParser */; };
+		CBF41BDE2848C2B20075DB1E /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = CBF41BDD2848C2B20075DB1E /* CodableCSV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +26,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CB4DF04F2844BFAE00A8602D /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
 		CB6BB34428438E8200DD666F /* OrgPool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OrgPool; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6BB34728438E8200DD666F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +36,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC1CC90284393D6005075F2 /* ArgumentParser in Frameworks */,
+				CBF41BDE2848C2B20075DB1E /* CodableCSV in Frameworks */,
 				CBC1CC8D28439118005075F2 /* SwiftOrg in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				CB6BB34728438E8200DD666F /* main.swift */,
-				CB4DF04F2844BFAE00A8602D /* CSVParser.swift */,
 			);
 			path = OrgPool;
 			sourceTree = "<group>";
@@ -96,6 +95,7 @@
 			packageProductDependencies = (
 				CBC1CC8C28439118005075F2 /* SwiftOrg */,
 				CBC1CC8F284393D6005075F2 /* ArgumentParser */,
+				CBF41BDD2848C2B20075DB1E /* CodableCSV */,
 			);
 			productName = orgengine;
 			productReference = CB6BB34428438E8200DD666F /* OrgPool */;
@@ -128,6 +128,7 @@
 			packageReferences = (
 				CB6BB3502843908500DD666F /* XCRemoteSwiftPackageReference "swift-org" */,
 				CBC1CC8E284393D6005075F2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				CBF41BDC2848C2B20075DB1E /* XCRemoteSwiftPackageReference "CodableCSV" */,
 			);
 			productRefGroup = CB6BB34528438E8200DD666F /* Products */;
 			projectDirPath = "";
@@ -144,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6BB34828438E8200DD666F /* main.swift in Sources */,
-				CB4DF0502844BFAE00A8602D /* CSVParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +322,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		CBF41BDC2848C2B20075DB1E /* XCRemoteSwiftPackageReference "CodableCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dehesa/CodableCSV";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -334,6 +342,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CBC1CC8E284393D6005075F2 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
 			productName = ArgumentParser;
+		};
+		CBF41BDD2848C2B20075DB1E /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBF41BDC2848C2B20075DB1E /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

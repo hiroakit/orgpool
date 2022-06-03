@@ -52,7 +52,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "import ~/Downloads/export-page-2022-05-29_16-43-56.csv ~/Desktop/testhoge"
+            argument = "convert ~/Downloads/export-page-2022-05-29_16-43-56.csv ~/Desktop/testhoge"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

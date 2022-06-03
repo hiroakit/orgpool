@@ -8,6 +8,7 @@
 import Foundation
 import ArgumentParser
 import SwiftOrg
+import CodableCSV
 
 struct OrgPool: ParsableCommand {
     static var configuration = CommandConfiguration(
@@ -44,7 +45,7 @@ struct ConvertWordPressCSV: ParsableCommand {
         
         // Setup
         let expandedUrl = URL(fileURLWithPath: NSString(string: url.relativePath).expandingTildeInPath)
-        let expandedDestDirUrl = URL(fileURLWithPath: NSString(string: destDirUrl.relativePath).expandingTildeInPath)
+        let expandedDestDirUrl = URL(fileURLWithPath: NSString(string: destDirUrl.relativePath).expandingTildeInPath, isDirectory: true)
         
         let fileManager = FileManager.default
         guard fileManager.fileExists(atPath: expandedUrl.path) else {
@@ -67,8 +68,7 @@ struct ConvertWordPressCSV: ParsableCommand {
         // Read org file
         let file = FileHandle(forReadingAtPath: expandedUrl.path)
         let data = (file?.readDataToEndOfFile())!
-        let dataString = String(data: data, encoding: .utf8)!
-        let csv = dataString.csvRows()
+        let csv = try CSVReader(input: data)
         for (index, value) in csv.enumerated() {
             // Skip header
             if index == 0 {
