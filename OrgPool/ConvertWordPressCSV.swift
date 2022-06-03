@@ -77,8 +77,6 @@ struct ConvertWordPressCSV: ParsableCommand {
             let errorPipe = Pipe()
             let proc = Process()
             proc.executableURL = URL(fileURLWithPath: "/usr/local/bin/pandoc")
-//            proc.arguments = ["-f", "html", "-t", "org", "/Users/hiroakit/Desktop/hoge.html", "-o", "/Users/hiroakit/Desktop/hoge.org"]
-//            proc.arguments = ["-f", "html", "-t", "org", "/Users/hiroakit/Desktop/hoge.html"]
             proc.arguments = ["-f", "html", "-t", "org"]
             proc.standardInput = inputFile
             proc.standardOutput = outputPipe
