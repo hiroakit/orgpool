@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB410D84284A2F0F0098EBD1 /* ApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB410D83284A2F0F0098EBD1 /* ApplicationError.swift */; };
+		CB410D86284A2F620098EBD1 /* HtmlMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB410D85284A2F620098EBD1 /* HtmlMeta.swift */; };
+		CB410D88284A2FAE0098EBD1 /* ConvertWordPressCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB410D87284A2FAE0098EBD1 /* ConvertWordPressCSV.swift */; };
 		CB6BB34828438E8200DD666F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BB34728438E8200DD666F /* main.swift */; };
 		CBC1CC8D28439118005075F2 /* SwiftOrg in Frameworks */ = {isa = PBXBuildFile; productRef = CBC1CC8C28439118005075F2 /* SwiftOrg */; };
 		CBC1CC90284393D6005075F2 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = CBC1CC8F284393D6005075F2 /* ArgumentParser */; };
@@ -26,6 +29,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CB410D83284A2F0F0098EBD1 /* ApplicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationError.swift; sourceTree = "<group>"; };
+		CB410D85284A2F620098EBD1 /* HtmlMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlMeta.swift; sourceTree = "<group>"; };
+		CB410D87284A2FAE0098EBD1 /* ConvertWordPressCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertWordPressCSV.swift; sourceTree = "<group>"; };
 		CB6BB34428438E8200DD666F /* OrgPool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OrgPool; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6BB34728438E8200DD666F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				CB6BB34728438E8200DD666F /* main.swift */,
+				CB410D83284A2F0F0098EBD1 /* ApplicationError.swift */,
+				CB410D85284A2F620098EBD1 /* HtmlMeta.swift */,
+				CB410D87284A2FAE0098EBD1 /* ConvertWordPressCSV.swift */,
 			);
 			path = OrgPool;
 			sourceTree = "<group>";
@@ -144,7 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB410D86284A2F620098EBD1 /* HtmlMeta.swift in Sources */,
 				CB6BB34828438E8200DD666F /* main.swift in Sources */,
+				CB410D88284A2FAE0098EBD1 /* ConvertWordPressCSV.swift in Sources */,
+				CB410D84284A2F0F0098EBD1 /* ApplicationError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
